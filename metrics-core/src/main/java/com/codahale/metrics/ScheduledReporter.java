@@ -76,6 +76,10 @@ public abstract class ScheduledReporter implements Closeable, Reporter {
         this.durationUnit = durationUnit.toString().toLowerCase(Locale.US);
     }
 
+    public void start() {
+        this.start(1000, TimeUnit.SECONDS);
+    }
+
     /**
      * Starts the reporter polling at the given period.
      *
